@@ -1,0 +1,104 @@
+function checkUserIdExist(){
+	  	let user_id = $("#user_id").val()
+		if(user_id.length == 0){
+			alert("아이디를 입력하시기 바랍니다.");
+			$("#user_id").focus();
+			return;
+		}
+		var params = { id:$("#user_id").val() }
+		$.ajax({
+			url:"${root }user/checkUserIdExist",
+			type:"get",
+			dataType:"text",
+			data:params,
+			success : function(result){
+				if(result.trim() == "true"){
+					alert("사용할 수 있는 아이디입니다");
+					$("#userIdExist").val("true");
+				}else{
+					alert("이미 존재하는 아이디입니다");
+					$("#userIdExist").val("false");
+				}
+			}	
+		});
+	}
+ 
+  function resetUserIdExist(){	  
+	  $("#userIdExist").val("false");
+  } // resetUserIdExist
+  
+  
+  
+  
+  <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 style="margin-top: 10px;" >맛집 이름</h2>
+        <p>맛집 소개 내용입니다.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 style="margin-top: 10px;" >맛집 이름</h2>
+        <p>맛집 소개 내용입니다.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h2 style="margin-top: 10px;" >맛집 이름</h2>
+        <p>맛집 소개 내용입니다.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   		<!-- TOP MENU - Responsive navbar-->
+        <c:import url="/WEB-INF/views/include/top_menu.jsp" />
+        
+        <!-- Footer-->
+        <c:import url="/WEB-INF/views/include/bottom_menu.jsp" />
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="${root }resources/js/scripts.js"></script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
